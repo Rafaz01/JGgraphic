@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Travel The World</title>
+	<link rel="shortcut icon" href="images/Travel%20the%20world.png">
+	<link rel="stylesheet" href="styles/help.css">
+	<link rel="stylesheet" href="styles/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});
+    </script>
+</head>
+
+<body>
+    <header>
+		<a href="index.html"><img src="images/Travel%20the%20world.png" alt="Travel The World logo" ></a>
+		<h1>Travel The World</h1>
+		<h2>Places you must see</h2>
+	</header>  
+	<nav id="mobile_menu"></nav>
+	<nav id="nav_menu">
+  	    <ul>
+    	    <li><a href="index.html">Home</a></li>
+    	    <li><a href="help.html" class="current">Request a quote</a></li>
+    	    <li><a href="vacation.html">Vacations/Tips</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+    <section>
+    <h2>Request a Quote</h2>
+<p>Let us help you plan and organize the trip of a lifetime.</p>
+<p>Choosing the right destination for you is our job. Good experiences at fair prices are hard to come by. 
+We begin by discussing your own needs, wants, and desires, as well as those of your traveling companions.</p><br>
+        <form action="request.html" method="get"
+        		name="request_form" id="request_form">
+        <fieldset>
+        <legend>First step (Your information)</legend>
+        <label for="name">*Name:</label>
+        <input type="text" name="name" id="name" autofocus required><br>
+            <label for="lastname">*Last Name:</label>
+        <input type="text" name="lastname" id="lastname" required><br>
+        <label for="email">*E-mail:</label>
+        <input type="email" name="email" id="email" required><br>
+                <label for="purpose_type">What is the purpose of your trip?</label>
+                <select  name="purouse_type" id="purpose_type">
+            <option value="purpose">Select your purpose</option>
+            <option value="business">Business</option>
+            <option value="vacation">Vacation</option>
+                    <option value="honeymoon">Honeymoon</option></select><br>
+      <label for="long">How long will your trip be?</label>
+        <input type="text" name="long" id="long"><br>
+            <label for="people">How many people will be traveling?</label>
+        <input type="text" name="people" id="people"><br>
+            <label for="kids">There will be children on the trip?</label>
+            <input type="text" name="kids" id="kids" placeholder="Yes or No">
+        </fieldset>
+    <fieldset>
+                <legend>Our Services</legend>
+                <label for="travel">Which services do you require?</label><br>
+                <input type="radio" name="travel" id="travel" value="travel">
+					<label for="travel">Booking travel</label>
+					<input type="radio" name="accommodations" id="accommodations" value="accommodations">
+					<label for="accommodations">Booking accommodations</label>
+                <input type="radio" name="planning" id="planning" value="planning">
+					<label for="planning">Planning excursion</label><br><br>
+        <label for="destination">Have you chosen your travel destination?</label>
+            <input type="text" name="destination" id="destination" placeholder="(Describe)"><br><br>
+        
+        <label for="departure">Specify your departure location</label>
+            <input type="text" name="departure" id="departure" placeholder="City or airport"><br>
+        <label for="dates">Do you know your travel dates?</label>
+            <input type="text" name="dates" id="dates" placeholder="If you have a travel date, identify it"><br><br>
+        <label for="detail">Additional details help pros provide the right recommendations, prices and service.</label><br>
+             <textarea id="detail" name="detail" rows="3"></textarea>
+        </fieldset>
+        <fieldset id="buttons">
+					<legend>Process your information</legend>
+					<label>&nbsp;</label>
+					<input type="submit" id="submit" value="Submit now">
+					<input type="reset" id="reset" value="reset fields"><br>
+				</fieldset>
+        </form>
+    </section>
+        <aside>
+            <img src="images/Islamargarita.jpg" alt="Wikimedia common">
+            <img src="images/cayosombrero.jpg" alt="Wikimedia common">
+            <img src="images/saltoangel.jpg" alt="Wikimedia common">
+        </aside>
+    
+    </main>
+     <footer>
+            <p>&copy; 2022 Travel The World | <a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia.org</a></p>
+	</footer>
+    </body>
+</html>

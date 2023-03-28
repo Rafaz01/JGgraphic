@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Travel The World</title>
+	<link rel="shortcut icon" href="images/Travel%20the%20world.png">
+	<link rel="stylesheet" href="styles/vacations.css">
+	<link rel="stylesheet" href="styles/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});
+    </script>
+</head>
+
+<body>
+    <header>
+		<a href="index.html"><img src="images/Travel%20the%20world.png" alt="Travel The World logo" ></a>
+		<h1>Travel The World</h1>
+		<h2>Places you must see</h2>
+	</header>  
+	<nav id="mobile_menu"></nav>
+	<nav id="nav_menu">
+  	    <ul>
+    	    <li><a href="index.html" >Home</a></li>
+    	    <li><a href="help.html">Request a quote</a></li>
+    	    <li><a href="vacation.html"class="current">Vacations/Tips</a></li>
+            <li><a href="Contact.html" >Contact Us</a></li>
+        </ul>
+    </nav>
+        <main>
+        <section>
+            <h2>1. Make A List</h2>
+            <p>Before every trip, I make a mental list of things I don't want to forget - which I WILL forget if I don't write them down. It has become a habit for me to write down what I think.</p>
+            <h2>2. Become familiar with common phrases in the local language</h2>
+            <p>When traveling, learning some simple phrases like "Please," "Thank you," or "I'm sorry" can go a long way.</p>
+            <h2>3. Travel Insurance</h2>
+            <p>In the event of a medical emergency, your savings could be wiped out. There are a lot of problems you can avoid if you have travel insurance.</p>
+            <h2>4. Important Documents</h2>
+            <p>Always have a copy of your most crucial documents, but keep them in a safe place all the time. </p>
+            <h2>5. Get to know the locals</h2>
+            <p>We always ask locals for recommendations on the best restaurants, the most scenic places to watch the sunset, the most popular coffee shops, etc. My favorite part of telling people what kind of food I want is that I tell them what kind of food I'm craving. Some of the restaurants were not my first choice, but they turned out to be interesting.</p>
+            
+            <audio id="music" src="media/music.mp3" autoplay="auto" loop controls></audio>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2022 Travel The World | <a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia.org</a></p>
+	</footer>
+    </body>
+</html>

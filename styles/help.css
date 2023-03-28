@@ -1,0 +1,195 @@
+/* the styles for the elements */
+h1, h2, h3, p {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "Times New Roman", Times, serif;
+    width: 90%;
+    max-width: 1024px;                      /* add max-width */
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-areas:
+        "head"
+        "navi"
+        "main"
+        "foot";
+}
+/* style to the header */
+
+header{
+    grid-area: head;
+    grid-column: 1 / 6;
+	text-align: center;
+    border-bottom: solid black 5px;
+    padding: 15px 1.5626%;
+    color: white;
+    background-image: linear-gradient(to bottom, darkorange 0%, orange 100%);
+}
+/* this style aplied to the  header image */
+header img { 
+    float: center;
+    width: 40%;
+    height: 80%;
+}
+header h1, header h2 {
+    font-style: italic;
+    margin: 2px;
+}
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "sec"
+}
+section {
+    width: 800px;
+    grid-area: sec;
+    padding: 7px;
+    float: left;
+    font-size: 120%;
+    grid-column: 3  / 12 ;
+}
+section h2 {
+    text-align:  center;
+    color: orange;
+}
+section p {
+    text-align: center;
+}
+/* the styles for the form */
+fieldset {
+    margin-bottom: .5em;
+    padding: .5em 1em;
+    margin: .3em;
+}
+select{
+    margin: 3px;
+}
+legend {
+    font-weight: bold;
+    padding-bottom: .5em;
+}
+label {
+    margin: .2em;
+    padding: .3em;
+    display:inline-flex
+}
+
+
+input:required, input[required] input:invalid {
+	border: 2px solid red;
+    display: block;
+    width: 40em;
+    height: 1.2em;
+    margin: .5em;
+    
+}
+input:valid {
+	border: 1px solid black;
+}
+input:invalid {
+	box-shadow: none;
+    
+}
+br {
+    clear: both;
+}
+textarea{
+    width: 400px;
+    height: 100px;
+}
+#buttons input {
+	width: 15em;
+}
+section p {
+    margin-bottom: .7em;
+}
+
+aside img{
+    margin: 5px;
+    width: 300px;
+    height: 300px;
+    
+}
+/* the styles for the navigation menu */
+#nav_menu {
+    grid-area: navi;
+	clear: left;
+    grid-column: 1 / 6;
+}
+#nav_menu ul {
+	list-style: none;
+	position: relative;
+}
+#nav_menu ul li {
+	float: left;
+    width: 24.999%;                              
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+  
+}
+#nav_menu > ul::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#nav_menu ul {
+	margin: 0;
+	padding: 0;
+}
+#nav_menu ul li a {
+	text-align: center;
+    font-size: 120%;
+	display: block;
+	padding: .7em 0;
+	background-color: black;
+	color: white;
+}
+#nav_menu ul li a.current {
+	color: moccasin;    
+}
+#nav_menu ul li a:hover, #nav_menu ul li a:focus {
+	font-style: oblique;
+    color:lightyellow;
+}
+footer  {
+    grid-area: foot;
+    display: grid;
+    grid-column: 1 / 6;
+    grid-row: 12 / span 10 ;
+	text-align: center;
+    background-color: black;
+    color: white;
+    margin-bottom: 0px;
+    padding: 7px;
+}
+#mobile_menu {
+	display: none;
+}
+
+/* media queries */
+@media only screen and (max-width: 767px) {
+	#nav_menu {
+		display: none;
+	}
+    
+    /* change background and decrease padding */
+    .slicknav_menu {
+        background: black !important;
+	    padding: 3px !important;
+    }
+    #mobile_menu {
+		display: block;
+	}
+    header {
+        display: grid;
+    }
+    body {
+        display: grid;
+        font-size: 90%;
+    }
+    section img {
+        width: 80%;
+    }

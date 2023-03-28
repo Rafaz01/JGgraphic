@@ -1,0 +1,151 @@
+/* the styles for the elements */
+h1, h2, h3, p {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "Times New Roman", Times, serif;
+    width: 90%;
+    max-width: 1024px;                      /* add max-width */
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-areas:
+        "head"
+        "navi"
+        "main"
+        "foot";
+}
+/* style to the header */
+
+header{
+    grid-area: head;
+    grid-column: 1 / 6;
+	text-align: center;
+    border-bottom: solid black 5px;
+    padding: 15px 1.5626%;
+    color: white;
+    background-image: linear-gradient(to bottom, darkorange 0%, orange 100%);
+}
+/* this style aplied to the  header image */
+header img { 
+    float: center;
+    width: 40%;
+    height: 80%;
+}
+header h1, header h2 {
+    font-style: italic;
+    margin: 2px;
+}
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "sec"
+}
+section {
+    width: 900px;
+    grid-area: sec;
+    padding: 7px;
+    float: left;
+    font-size: 120%;
+    
+}
+section h2 {
+    color: indianred;
+    text-align: center;
+    font-size: 200%;
+    margin: .5em;
+    transition: all 2s ease-out 1s;
+}
+section h2:hover {transition-duration: 1s;
+    transform: scale(2.0) }
+    
+section p{
+    text-align: left;
+    font-size: 120%;
+}
+section video {
+    width: 90%;
+    border: 4px solid black;
+}
+/* the styles for the navigation menu */
+#nav_menu {
+    grid-area: navi;
+	clear: left;
+    grid-column: 1 / 6;
+}
+#nav_menu ul {
+	list-style: none;
+	position: relative;
+}
+#nav_menu ul li {
+	float: left;
+    width: 24.999%;                              
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+  
+}
+#nav_menu > ul::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#nav_menu ul {
+	margin: 0;
+	padding: 0;
+}
+#nav_menu ul li a {
+	text-align: center;
+    font-size: 120%;
+	display: block;
+	padding: .7em 0;
+	background-color: black;
+	color: white;
+}
+#nav_menu ul li a.current {
+	color: moccasin;    
+}
+#nav_menu ul li a:hover, #nav_menu ul li a:focus {
+	font-style: oblique;
+    color:lightyellow;
+}
+footer  {
+    grid-area: foot;
+    display: grid;
+    grid-column: 1 / 6;
+    grid-row: 12 / span 10 ;
+	text-align: center;
+    background-color: black;
+    color: white;
+    margin-bottom: 0px;
+    padding: 7px;
+}
+#mobile_menu {
+	display: none;
+}
+
+/* media queries */
+@media only screen and (max-width: 767px) {
+	#nav_menu {
+		display: none;
+	}
+    
+    /* change background and decrease padding */
+    .slicknav_menu {
+        background: black !important;
+	    padding: 3px !important;
+    }
+    #mobile_menu {
+		display: block;
+	}
+    header {
+        display: grid;
+    }
+    body {
+        display: grid;
+        font-size: 90%;
+    }
+    section img {
+        width: 80%;
+    }
